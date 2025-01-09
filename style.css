@@ -1,120 +1,156 @@
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-header, footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-main {
-    flex: 1;
-    padding: 2rem;
-}
-
-.meal-card {
-    margin-bottom: 1.5rem;
-}
-
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-
-#mealsContainer {
-    overflow-y: auto;
-    max-height: 600px;
-    padding-right: 1rem;
-}
-
-.text-danger {
-    color: #dc3545 !important;
-}
 /* General Body Styling */
 body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #343a40;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
 }
 
-/* Header and Footer */
-header, footer {
-    background-color: #343a40;
+/* Header Styling */
+header {
+    background: linear-gradient(90deg, #007bff, #0056b3);
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    margin-top: auto;
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
 }
 
 /* Navbar Styling */
 .navbar {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: #343a40;
+    padding: 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f8f9fa !important;
 }
 
 .nav-link {
-    color: white !important;
+    color: #f8f9fa !important;
+    margin: 0 10px;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #f8d7da !important;
+    color: #007bff !important;
 }
 
 /* Main Content */
 main {
     flex: 1;
-    padding: 2rem;
+    padding: 2rem 1rem;
 }
 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Search Section */
+#searchInput {
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#searchButton {
+    width: 100%;
+    padding: 0.75rem;
+    background: #007bff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+/* Meal Cards */
 .meal-card {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Card Image Styling */
+.meal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .card-img-top {
     height: 200px;
     object-fit: cover;
 }
 
-/* Meals Container Scrollable Section */
-#mealsContainer {
-    overflow-y: auto;
-    max-height: 600px;
-    padding-right: 1rem;
+.card-body {
+    padding: 1rem;
 }
 
-/* Text Danger Styling */
-.text-danger {
-    color: #dc3545 !important;
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
 }
 
 /* Creator Information Section */
 #creatorInfo {
-    background-color: #ffffff;
+    background: #ffffff;
     border: 1px solid #dee2e6;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
 }
 
 #creatorInfo h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
     color: #343a40;
+    margin-bottom: 1rem;
+}
+
+#creatorInfo p {
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.5;
 }
 
 #creatorInfo a {
     color: #007bff;
     text-decoration: none;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
@@ -122,14 +158,45 @@ main {
     color: #0056b3;
 }
 
-/* Button Hover Effects */
-.btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+/* Show All Button */
+#showAllButton {
+    width: 100%;
+    padding: 0.75rem;
+    background: #6c757d;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
-.btn-secondary:hover {
-    background-color: #6c757d;
-    border-color: #6c757d;
+#showAllButton:hover {
+    background-color: #495057;
 }
 
+/* Footer Styling */
+footer {
+    background: #343a40;
+    color: #f8f9fa;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #searchButton, #showAllButton {
+        width: 100%;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+    }
+}

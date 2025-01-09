@@ -36,3 +36,100 @@ main {
 .text-danger {
     color: #dc3545 !important;
 }
+/* General Body Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f8d7da !important;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+.meal-card {
+    margin-bottom: 1.5rem;
+}
+
+/* Card Image Styling */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Meals Container Scrollable Section */
+#mealsContainer {
+    overflow-y: auto;
+    max-height: 600px;
+    padding-right: 1rem;
+}
+
+/* Text Danger Styling */
+.text-danger {
+    color: #dc3545 !important;
+}
+
+/* Creator Information Section */
+#creatorInfo {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#creatorInfo h2 {
+    color: #343a40;
+}
+
+#creatorInfo a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#creatorInfo a:hover {
+    color: #0056b3;
+}
+
+/* Button Hover Effects */
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-secondary:hover {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+

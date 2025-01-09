@@ -10,27 +10,25 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="#">Meal Search</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#searchSection">Search Meal</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#creatorInfo">Creator Information</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+   
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Meal Finder</h1>
     </header>
-    <main>
+
+    <main class="container my-4 flex-grow-1">
+        <div class="row mb-4">
+            <div class="col-12">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search for a meal...">
+                <button id="searchBtn" class="btn btn-primary mt-2">Search</button>
+            </div>
+        </div>
+        <div id="mealsContainer" class="row"></div>
+        
+        <!-- Center the 'SHOW ALL' button -->
+        <div class="d-flex justify-content-center">
+            <button id="moreMealsBtn" class="btn btn-secondary mt-3 d-none">SHOW ALL</button>
+        </div>
+    </main>
         <div class="container">
             <div class="mb-3">
                 <input type="text" id="searchInput" class="form-control" placeholder="Search for a meal...">
